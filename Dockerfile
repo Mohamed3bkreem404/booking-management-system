@@ -4,6 +4,8 @@ WORKDIR /app
 
 COPY . .
 
+RUN chmod +x mvnw
+
 RUN ./mvnw dependency:go-offline
 
 RUN ./mvnw package -DskipTests
